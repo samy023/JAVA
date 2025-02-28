@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Mobile Brand Details</h1>
+
+    <!-- Dropdown to select brand -->
+    <label for="brand">Select Brand:</label>
+    <select id="brand" onchange="updateModels()">
+        <option value="">--Select Brand--</option>
+        <option value="samsung">Samsung</option>
+        <option value="apple">Apple</option>
+        <option value="xiaomi">Xiaomi</option>
+    </select>
+
+    <!-- Dropdown to select model -->
+    <label for="model">Select Model:</label>
+    <select id="model">
+        <option value="">--Select Model--</option>
+    </select>
+
+    <!-- Dropdown to select storage -->
+    <label for="storage">Select Storage:</label>
+    <select id="storage">
+        <option value="">--Select Storage--</option>
+        <option value="64GB">64GB</option>
+        <option value="128GB">128GB</option>
+        <option value="256GB">256GB</option>
+    </select>
+
+    <!-- Button to add selected item to the table -->
+    <button onclick="addToTable()">Add to Table</button>
+
+    <!-- Table to display selected mobile details -->
+    <table id="mobileTable">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Storage</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added dynamically by JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Display total price -->
+    <div id="totalPrice">
+        <strong>Total Price: $<span id="total">0</span></strong>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
